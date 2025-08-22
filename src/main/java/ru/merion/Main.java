@@ -1,18 +1,109 @@
 package main.java.ru.merion;
 
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import main.java.ru.merion.base.Base;
-import main.java.ru.merion.classes.Animal;import main.java.ru.merion.classes.Cat;
+import main.java.ru.merion.classes.Animal;
+import main.java.ru.merion.classes.Cat;
+import main.java.ru.merion.classes.Dog;
 
 public class Main {
+
+    private static final Logger logger = Logger.getLogger(Main.class.getName());
 
     public static void main(String[] args) {
         Base.run();
 
-        Animal animal = new Animal();
+        Animal animal = new Animal("Животное", 2);
         animal.voice();
 
-        Cat cat = new Cat();
+        Cat cat = new Cat("Барсик", 2);
         cat.voice();
+        int jumpHeight = cat.jumpHeight();
+
+        if (logger.isLoggable(Level.INFO)) {
+            logger.log(Level.INFO, String.format("Высота прыжка: %s", jumpHeight));
+        }
+
+        int x0 = 10;
+
+        modifyPrimitive(x0);
+
+        if (logger.isLoggable(Level.INFO)) {
+            logger.info(String.format("Измененный примитив: %d", x0));
+        }
+
+        // Создаём объект Box с value = 10
+        Box myBox = new Box(10);
+
+        // Лог до изменения
+        if (logger.isLoggable(Level.INFO)) {
+            logger.info("До метода: myBox.value = " + myBox.value);
+        }
+
+        // Передаём объект в метод
+        modifyBox(myBox);
+
+        // Лог после метода
+        if (logger.isLoggable(Level.INFO)) {
+            logger.info("После метода: myBox.value = " + myBox.value);
+        }
+
+        // Уровни методов в Java
+        Dog dog = new Dog("Рекс", 5);
+
+        dog.goToStick(14);
+        logger.info(dog.whereTheDog());
+
+        dog.goToStick(20);
+        logger.info(dog.whereTheDog());
+
+        dog.goToStick(5);
+        logger.info(dog.whereTheDog());
+
+        Dog homelessDog = Dog.ofHomeless("Bob", 10);
+
+        if (logger.isLoggable(Level.INFO)) {
+            logger.info(homelessDog.toString());
+        }
+
+    }
+
+    // Метод, который меняет поле объекта
+    public static void modifyBox(Box box) {
+        box.value *= 2;
+
+        if (logger.isLoggable(Level.INFO)) {
+            logger.info("Внутри метода: box.value = " + box.value);
+        }
+    }
+
+    void print(double x) {
+        if (logger.isLoggable(Level.INFO)) {
+            logger.info("x = " + x);
+        }
+    }
+
+    int print(int x, int y) {
+        return x + y;
+    }
+
+    int print(int x) {
+        return x * x;
+    }
+
+    public static void modifyPrimitive(int x) {
+        x *= 2; // ← это только ЛОКАЛЬНАЯ копия! это не влияет на оригинальный x снаружи.
+    }
+}
+
+// Простой класс с полем int
+class Box {
+
+    int value;
+
+    Box(int value) {
+        this.value = value;
     }
 }
