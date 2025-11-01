@@ -1,6 +1,5 @@
 package main.java.ru.merion.classes.collectionframework;
 
-import java.sql.SQLOutput;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
@@ -22,7 +21,7 @@ public class CollectionFramework {
         System.out.println(dogHomeless.get(2));
 
         for (int i = 0; i < 10; i++) {
-            System.out.println("i = "+ i);
+            System.out.println("i = " + i);
         }
 
         for (Dog dog : dogHomeless) {
@@ -62,8 +61,12 @@ public class CollectionFramework {
         System.out.println(example);
 
         switch (example) {
-            case 1: System.out.println("You won"); break;
-            case 2, 3, 4: System.out.println("You lose"); break;
+            case 1:
+                System.out.println("You won");
+                break;
+            case 2, 3, 4:
+                System.out.println("You lose");
+                break;
             default:
                 System.out.printf("Bye!");
         }

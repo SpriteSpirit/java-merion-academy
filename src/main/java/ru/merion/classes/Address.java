@@ -1,6 +1,7 @@
 package main.java.ru.merion.classes;
 
 public class Address implements Cloneable {
+
     String street;
     Integer house;
     Integer zipcode;

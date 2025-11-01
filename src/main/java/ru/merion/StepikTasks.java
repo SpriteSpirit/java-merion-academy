@@ -271,6 +271,7 @@ public class StepikTasks {
             });
 
         printSeparator("=");
-        System.out.println(String.format("Total issues: %d. By %d months", sumStream(issues), issues.length));
+        System.out.println(
+            String.format("Total issues: %d. By %d months", sumStream(issues), issues.length));
     }
 }
