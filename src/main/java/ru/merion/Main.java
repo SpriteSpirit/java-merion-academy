@@ -7,6 +7,7 @@ import main.java.ru.merion.base.Base;
 import main.java.ru.merion.classes.Animal;
 import main.java.ru.merion.classes.Cat;
 import main.java.ru.merion.classes.Dog;
+import main.java.ru.merion.classes.Duck;
 
 public class Main {
 
@@ -20,6 +21,10 @@ public class Main {
 
         Cat cat = new Cat("Барсик", 2);
         cat.voice();
+
+        Duck duck = new Duck();
+        duck.voice();
+
         int jumpHeight = cat.jumpHeight();
 
         if (logger.isLoggable(Level.INFO)) {

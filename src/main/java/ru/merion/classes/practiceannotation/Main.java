@@ -2,22 +2,22 @@ package main.java.ru.merion.classes.practiceannotation;
 
 import java.util.ArrayList;
 import java.util.List;
+import main.java.ru.merion.classes.Dog;
 
 public class Main {
 
     public static void main(String[] args) {
-        Dog dog = new Dog();
+        PracticeDog dog = new PracticeDog();
         System.out.println(dog);
         dog.makeSound();
 
         MathUtils sum = new MathUtils();
 //        sum.oldGetSum(5, 2);
 
-
-        Animal dog2 = new Dog();
+        Animal dog2 = new PracticeDog();
         dog2.makeSound();
         // кастинг - приведение типов (для уточнения типа, чтобы использовать методы подкласса)
-        ((Dog) dog2).playWithToy("bone");
+        ((PracticeDog) dog2).playWithToy("bone");
 
         getRawList("Line 1");
         getSomeWarnings();
@@ -43,6 +43,26 @@ public class Main {
         var legacy = oldApi;
         legacy.printOldApi();
         newApi.printNewApi();
+
+        Dog[] dogHomeless = new Dog[]{
+            Dog.ofHomeless("Rex", 3),
+            Dog.ofHomeless("Jack", 2),
+            Dog.ofHomeless("Bobby", 4),
+            Dog.ofHomeless("Charlie", 1),
+        };
+
+        System.out.println(dogHomeless[0]);
+        System.out.println(dogHomeless[1]);
+        System.out.println(dogHomeless[2]);
+        System.out.println(dogHomeless[3]);
+
+        System.out.println("");
+
+        List<Dog> dogs = Dog.randomDogArray();
+
+        for (Dog dog_ : dogs) {
+            System.out.println(dog_);
+        }
     }
 
     @SuppressWarnings("unchecked")

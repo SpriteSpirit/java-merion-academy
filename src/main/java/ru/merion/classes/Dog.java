@@ -1,13 +1,18 @@
 package main.java.ru.merion.classes;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Dog extends Animal {
 
     public Dog(String name, Integer age) {
         super(name, age);
+        canFly = false;
     }
 
     /**
      * Определяет расстояние до палки
+     *
      * @param stickPosition - координаты палки
      */
     public void goToStick(Integer stickPosition) {
@@ -21,11 +26,35 @@ public class Dog extends Animal {
 
     /**
      * Создает и возвращает объект вместо того, чтобы вызывать new напрямую
+     *
      * @param name
      * @param age
      * @return
      */
     public static Dog ofHomeless(String name, Integer age) {
         return new Dog(name, age);
+    }
+
+    public static Dog of(String name, Integer age) {
+        return new Dog(name, age);
+    }
+
+    public static List<Dog> randomDogArray() {
+        List<Dog> dogs = new ArrayList<>();
+
+        dogs.add(Dog.of("Sharik", 5));
+        dogs.add(Dog.of("Bobik", 3));
+        dogs.add(Dog.of("Charlie", 1));
+
+        return dogs;
+    }
+
+    @Override
+    public String toString() {
+        return "Dog{" +
+            "currentPosition=" + currentPosition +
+            ", age=" + age +
+            ", name='" + name + '\'' +
+            '}';
     }
 }

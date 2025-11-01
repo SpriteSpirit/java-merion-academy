@@ -12,6 +12,7 @@ public class Cat extends Animal {
 
     public Cat(String name, Integer age) {
         super(name, age);
+        canFly = false;
     }
 
     public Integer jumpHeight() {

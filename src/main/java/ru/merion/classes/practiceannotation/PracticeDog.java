@@ -1,6 +1,6 @@
 package main.java.ru.merion.classes.practiceannotation;
 
-public class Dog extends Animal {
+public class PracticeDog extends Animal {
     @Override
     public void makeSound() {
         System.out.println(String.format("%s make sound", getClass().getSimpleName()));
