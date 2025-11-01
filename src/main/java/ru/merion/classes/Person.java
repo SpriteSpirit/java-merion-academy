@@ -16,6 +16,30 @@ public class Person implements Cloneable {
         this.address = address;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
     @Override
     public String toString() {
         return "Person{" +
@@ -57,5 +81,13 @@ public class Person implements Cloneable {
         System.out.println("Alice: " + alice);
         System.out.println("Alice copy: " + aliceCopy);
         System.out.println("Alice deep copy: " + aliceDeepCopy);
+
+        aliceDeepCopy.setAge(35);
+
+        System.out.println(alice.getAddress());
+        System.out.println(alice.getName());
+        System.out.println(alice.getAge());
+
+        System.out.println(aliceDeepCopy.getAge());
     }
 }
