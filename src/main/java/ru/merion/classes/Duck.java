@@ -6,4 +6,10 @@ public class Duck extends Bird {
         super();
         System.out.println("public Duck");
     }
+
+    static void main() {
+        Duck duck = new Duck();
+
+        System.out.println(duck.getClass().getSimpleName() + " " + duck.getMoveType());
+    }
 }

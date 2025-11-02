@@ -2,12 +2,12 @@ package main.java.ru.merion.classes;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Dog extends Animal {
 
     public Dog(String name, Integer age) {
-        super(name, age);
-        canFly = false;
+        super(name, age, MoveType.WALK);
     }
 
     /**
@@ -47,6 +47,21 @@ public class Dog extends Animal {
         dogs.add(Dog.of("Charlie", 1));
 
         return dogs;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, age);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+
+        Dog other = (Dog) obj;
+
+        return age == other.age && Objects.equals(name, other.name);
     }
 
     @Override

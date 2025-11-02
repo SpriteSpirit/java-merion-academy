@@ -10,15 +10,16 @@ public class Animal {
     protected String name;
     protected Integer age;
     protected Integer currentPosition = 0;
-    protected Boolean canFly = false;
+    protected MoveType moveType;
 
-    public Animal() {
-
+    public Animal(MoveType moveType) {
+        this.moveType = moveType;
     }
 
-    public Animal(String name, Integer age) {
+    public Animal(String name, Integer age, MoveType moveType) {
         this.name = name;
         this.age = age;
+        this.moveType = moveType;
     }
 
     public void voice() {
@@ -29,5 +30,13 @@ public class Animal {
 
     protected void runForward(Integer length) {
         this.currentPosition += length;
+    }
+
+    public MoveType getMoveType() {
+        return moveType;
+    }
+
+    public void setMoveType(MoveType moveType) {
+        this.moveType = moveType;
     }
 }

@@ -11,8 +11,7 @@ public class Cat extends Animal {
     private final int jumpRatio = 20;
 
     public Cat(String name, Integer age) {
-        super(name, age);
-        canFly = false;
+        super(name, age, MoveType.WALK);
     }
 
     public Integer jumpHeight() {
@@ -24,5 +23,11 @@ public class Cat extends Animal {
             logger.info(String.format("Jump height: %d cm", this.age * jumpRatio));
         }
         return this.age * jumpRatio;
+    }
+
+    static void main() {
+        Cat cat = new Cat("Барсик", 2);
+
+        System.out.println(cat.name + " " + cat.getMoveType());
     }
 }

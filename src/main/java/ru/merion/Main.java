@@ -8,6 +8,7 @@ import main.java.ru.merion.classes.Animal;
 import main.java.ru.merion.classes.Cat;
 import main.java.ru.merion.classes.Dog;
 import main.java.ru.merion.classes.Duck;
+import main.java.ru.merion.classes.MoveType;
 
 public class Main {
 
@@ -16,7 +17,7 @@ public class Main {
     public static void main(String[] args) {
         Base.run();
 
-        Animal animal = new Animal("Животное", 2);
+        Animal animal = new Animal("Животное", 2, MoveType.FLY);
         animal.voice();
 
         Cat cat = new Cat("Барсик", 2);
