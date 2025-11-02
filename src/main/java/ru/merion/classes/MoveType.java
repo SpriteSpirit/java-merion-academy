@@ -3,7 +3,7 @@ package main.java.ru.merion.classes;
 public enum MoveType {
     FLY("Летает"), WALK("Ходит"), SWIM("Плавает");
 
-    private String value;
+    private final String value;
 
     MoveType(String value) {
         this.value = value;
