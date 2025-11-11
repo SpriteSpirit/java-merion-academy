@@ -1,4 +1,4 @@
-package main.java.ru.merion.classes;
+package main.java.ru.merion.classes.baseclasses;
 
 import java.util.ArrayList;
 import java.util.List;

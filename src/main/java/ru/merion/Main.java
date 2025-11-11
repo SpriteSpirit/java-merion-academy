@@ -1,14 +1,19 @@
 package main.java.ru.merion;
 
 
+import java.time.LocalTime;
+import java.util.Arrays;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import main.java.ru.merion.base.Base;
-import main.java.ru.merion.classes.Animal;
-import main.java.ru.merion.classes.Cat;
-import main.java.ru.merion.classes.Dog;
-import main.java.ru.merion.classes.Duck;
-import main.java.ru.merion.classes.MoveType;
+import main.java.ru.merion.classes.baseclasses.Animal;
+import main.java.ru.merion.classes.baseclasses.Cat;
+import main.java.ru.merion.classes.baseclasses.Dog;
+import main.java.ru.merion.classes.baseclasses.Duck;
+import main.java.ru.merion.classes.baseclasses.FeedingSchedule;
+import main.java.ru.merion.classes.baseclasses.MoveType;
+import main.java.ru.merion.classes.baseclasses.TimeBasedFeedingSchedule;
 
 public class Main {
 
@@ -20,17 +25,8 @@ public class Main {
         Animal animal = new Animal("Животное", 2, MoveType.FLY);
         animal.voice();
 
-        Cat cat = new Cat("Барсик", 2);
-        cat.voice();
-
         Duck duck = new Duck();
         duck.voice();
-
-        int jumpHeight = cat.jumpHeight();
-
-        if (logger.isLoggable(Level.INFO)) {
-            logger.log(Level.INFO, String.format("Высота прыжка: %s", jumpHeight));
-        }
 
         int x0 = 10;
 

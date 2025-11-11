@@ -2,7 +2,7 @@ package main.java.ru.merion.classes.practiceannotation;
 
 import java.util.ArrayList;
 import java.util.List;
-import main.java.ru.merion.classes.Dog;
+import main.java.ru.merion.classes.baseclasses.Dog;
 
 public class Main {
 
@@ -22,8 +22,8 @@ public class Main {
         getRawList("Line 1");
         getSomeWarnings();
 
-        Converter<String> stringConverter = text -> System.out.println(text.toLowerCase());
-        stringConverter.convert("HELLO WORLD!");
+        Converter<String> stringConverter = text -> text.toLowerCase();
+        System.out.println(stringConverter.convert("HELLO WORLD!"));
 
         List<String> stringList = new ArrayList<>();
         stringList.add("1");

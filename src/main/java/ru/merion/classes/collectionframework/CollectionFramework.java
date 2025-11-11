@@ -3,7 +3,7 @@ package main.java.ru.merion.classes.collectionframework;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
-import main.java.ru.merion.classes.Dog;
+import main.java.ru.merion.classes.baseclasses.Dog;
 
 public class CollectionFramework {
 

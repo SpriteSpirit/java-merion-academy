@@ -1,4 +1,4 @@
-package main.java.ru.merion.classes;
+package main.java.ru.merion.classes.person;
 
 public class Address implements Cloneable {
 

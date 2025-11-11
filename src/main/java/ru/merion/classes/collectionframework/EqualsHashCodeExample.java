@@ -1,5 +1,7 @@
-package main.java.ru.merion.classes;
+package main.java.ru.merion.classes.collectionframework;
 
+
+import main.java.ru.merion.classes.baseclasses.Dog;
 
 public class EqualsHashCodeExample {
 
