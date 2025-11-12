@@ -7,7 +7,6 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import main.java.ru.merion.base.Base;
-import main.java.ru.merion.classes.baseclasses.Animal;
 import main.java.ru.merion.classes.baseclasses.Cat;
 import main.java.ru.merion.classes.baseclasses.Dog;
 import main.java.ru.merion.classes.baseclasses.Duck;
@@ -21,9 +20,6 @@ public class Main {
 
     public static void main(String[] args) {
         Base.run();
-
-        Animal animal = new Animal("Животное", 2, MoveType.FLY);
-        animal.voice();
 
         Duck duck = new Duck();
         duck.voice();
@@ -54,6 +50,7 @@ public class Main {
 
         // Уровни методов в Java
         Dog dog = new Dog("Рекс", 5);
+        dog.voice();
 
         dog.goToStick(14);
         logger.info(dog.whereTheDog());

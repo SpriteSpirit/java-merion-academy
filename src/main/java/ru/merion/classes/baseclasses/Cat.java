@@ -53,4 +53,9 @@ public class Cat extends Animal {
             logger.log(Level.INFO, String.format("Высота прыжка: %s", jumpHeight));
         }
     }
+
+    @Override
+    public void voice() {
+        System.out.println("Meow-meow");
+    }
 }

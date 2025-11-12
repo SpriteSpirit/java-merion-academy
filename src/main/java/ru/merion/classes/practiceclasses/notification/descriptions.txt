@@ -1,0 +1,13 @@
+// 1. Создай абстрактный класс Notification
+//    - Поля: recipient, message, sentDate
+//    - Общие методы: validate(), logNotification()
+//    - Абстрактный метод: send()
+
+// 2. Создай интерфейсы:
+//    - Prioritizable (с приоритетом)
+//    - Trackable (с отслеживанием доставки)
+
+// 3. Реализуй классы:
+//    - EmailNotification (отправка по email)
+//    - SmsNotification (отправка SMS)
+//    - PushNotification (push-уведомление)

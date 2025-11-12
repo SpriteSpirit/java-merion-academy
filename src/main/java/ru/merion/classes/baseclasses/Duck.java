@@ -18,4 +18,9 @@ public class Duck extends Bird implements Swimmable {
         System.out.println(duck.getClass().getSimpleName() + " " + duck.getMoveType());
         duck.swim();
     }
+
+    @Override
+    public void voice() {
+        System.out.println("Quack-quack");
+    }
 }

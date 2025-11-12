@@ -4,7 +4,7 @@ import java.time.LocalTime;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class Animal {
+abstract class Animal {
 
     private static final Logger logger = Logger.getLogger(Animal.class.getName());
 
@@ -45,11 +45,7 @@ public class Animal {
         return name;
     }
 
-    public void voice() {
-        if (logger.isLoggable(Level.INFO)) {
-            logger.info("Голос!");
-        }
-    }
+    public abstract void voice();
 
     protected void runForward(Integer length) {
         this.currentPosition += length;

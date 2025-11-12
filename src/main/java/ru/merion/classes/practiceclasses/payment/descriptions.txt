@@ -1,0 +1,14 @@
+// 1. Создай абстрактный класс Payment
+//    - Поля: amount, currency, transactionId
+//    - Общие методы: validatePayment(), generateReceipt()
+//    - Абстрактный метод: processPayment()
+
+// 2. Создай интерфейсы:
+//    - Refundable (можно вернуть деньги)
+//    - Recurring (можно сделать подписку)
+//    - Secure (требует двухфакторную аутентификацию)
+
+// 3. Реализуй классы:
+//    - CreditCardPayment (оплата картой)
+//    - PayPalPayment (оплата через PayPal)
+//    - CryptoPayment (оплата криптовалютой)

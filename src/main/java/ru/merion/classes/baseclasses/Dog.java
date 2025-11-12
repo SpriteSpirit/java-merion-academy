@@ -72,4 +72,9 @@ public class Dog extends Animal {
             ", name='" + name + '\'' +
             '}';
     }
+
+    @Override
+    public void voice() {
+        System.out.println("Woof-woof");
+    }
 }
