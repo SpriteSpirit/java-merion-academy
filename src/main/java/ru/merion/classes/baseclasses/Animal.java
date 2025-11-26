@@ -1,7 +1,6 @@
 package main.java.ru.merion.classes.baseclasses;
 
 import java.time.LocalTime;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 abstract class Animal {
@@ -26,6 +25,9 @@ abstract class Animal {
     }
 
     public Animal(String name, Integer age, MoveType moveType) {
+        this.name = name;
+        this.age = age;
+        this.moveType = moveType;
     }
 
     public boolean shouldFeedNow(LocalTime time) {

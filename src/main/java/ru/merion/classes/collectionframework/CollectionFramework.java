@@ -3,16 +3,18 @@ package main.java.ru.merion.classes.collectionframework;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
+import main.java.ru.merion.classes.NestedClassesAnimal.AnimalWeight;
+import main.java.ru.merion.classes.NestedClassesAnimal.AnimalWeight.WeightType;
 import main.java.ru.merion.classes.baseclasses.Dog;
 
 public class CollectionFramework {
 
     static void main() {
         List<Dog> dogHomeless = Arrays.asList(new Dog[]{
-            Dog.ofHomeless("Rex", 3),
-            Dog.ofHomeless("Jack", 2),
-            Dog.ofHomeless("Bobby", 4),
-            Dog.ofHomeless("Charlie", 1),
+            Dog.ofHomeless("Rex", new AnimalWeight(5, WeightType.KG), 3),
+            Dog.ofHomeless("Jack", new AnimalWeight(5, WeightType.KG), 2),
+            Dog.ofHomeless("Bobby", new AnimalWeight(5, WeightType.KG), 4),
+            Dog.ofHomeless("Charlie", new AnimalWeight(5, WeightType.KG), 1),
         });
 
         System.out.println(dogHomeless.size());

@@ -7,6 +7,8 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import main.java.ru.merion.base.Base;
+import main.java.ru.merion.classes.NestedClassesAnimal.AnimalWeight;
+import main.java.ru.merion.classes.NestedClassesAnimal.AnimalWeight.WeightType;
 import main.java.ru.merion.classes.baseclasses.Cat;
 import main.java.ru.merion.classes.baseclasses.Dog;
 import main.java.ru.merion.classes.baseclasses.Duck;
@@ -49,7 +51,7 @@ public class Main {
         }
 
         // Уровни методов в Java
-        Dog dog = new Dog("Рекс", 5);
+        Dog dog = new Dog("Рекс", new AnimalWeight(7, WeightType.KG), 5);
         dog.voice();
 
         dog.goToStick(14);
@@ -61,7 +63,7 @@ public class Main {
         dog.goToStick(5);
         logger.info(dog.whereTheDog());
 
-        Dog homelessDog = Dog.ofHomeless("Bob", 10);
+        Dog homelessDog = Dog.ofHomeless("Bob", new AnimalWeight(10, WeightType.KG), 2);
 
         if (logger.isLoggable(Level.INFO)) {
             logger.info(homelessDog.toString());

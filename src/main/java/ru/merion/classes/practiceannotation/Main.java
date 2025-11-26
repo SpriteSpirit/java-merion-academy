@@ -2,6 +2,8 @@ package main.java.ru.merion.classes.practiceannotation;
 
 import java.util.ArrayList;
 import java.util.List;
+import main.java.ru.merion.classes.NestedClassesAnimal.AnimalWeight;
+import main.java.ru.merion.classes.NestedClassesAnimal.AnimalWeight.WeightType;
 import main.java.ru.merion.classes.baseclasses.Dog;
 
 public class Main {
@@ -45,10 +47,10 @@ public class Main {
         newApi.printNewApi();
 
         Dog[] dogHomeless = new Dog[]{
-            Dog.ofHomeless("Rex", 3),
-            Dog.ofHomeless("Jack", 2),
-            Dog.ofHomeless("Bobby", 4),
-            Dog.ofHomeless("Charlie", 1),
+            Dog.ofHomeless("Rex", new AnimalWeight(6, WeightType.KG), 3),
+            Dog.ofHomeless("Jack", new AnimalWeight(6, WeightType.KG), 2),
+            Dog.ofHomeless("Bobby", new AnimalWeight(6, WeightType.KG), 4),
+            Dog.ofHomeless("Charlie", new AnimalWeight(6, WeightType.KG), 1),
         };
 
         System.out.println(dogHomeless[0]);

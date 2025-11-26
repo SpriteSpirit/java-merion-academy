@@ -3,7 +3,7 @@ package main.java.ru.merion.classes.baseclasses;
 import java.util.Set;
 
 public class FeedingService {
-    private final Set<Class<? extends Animal>> fedTypes = Set.of(Dog.class, Cat.class, Duck.class);
+    private final Set<Class<? extends Animal>> fedTypes = Set.of(Cat.class, Duck.class);
 
     public void feedIfNeeded(Animal animal) {
         if (fedTypes.contains(animal.getClass())) {
